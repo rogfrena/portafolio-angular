@@ -12,13 +12,15 @@ export class SearchComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               public productoService: ProductosService) { }
 
-  ngOnInit(): void{
+  ngOnInit() {
 
     this.route.params
     .subscribe( params => {
+
       console.log(params['termino']);
-      this.productoService.buscarPoducto(params['termino']);
-    });
+      this.productoService.buscarPoducto( params['termino'] );
+
+    })
   }
 
 }

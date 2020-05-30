@@ -36,7 +36,7 @@ export class ProductosService {
   buscarPoducto( termino: string){
 
     if ( this.productos.length === 0 ){
-      //cargar  los productos 
+        //cargar productos 
       this.cargarProductos().then( () => {
         // ejecutar despues de tener los productos
         // y aplicar filtro
@@ -69,7 +69,7 @@ export class ProductosService {
         this.productosFiltrado.push( prod );
       }
 
-    })
+    });
   }
 }
 
